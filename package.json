@@ -1,0 +1,19 @@
+{
+  "name": "logseq-theme-monokai",
+  "version": "0.1.0",
+  "description": "A Monokai Pro inspired CSS-only theme for Logseq.",
+  "main": "custom.css",
+  "scripts": {},
+  "keywords": [
+    "logseq",
+    "theme",
+    "monokai",
+    "logseq-plugin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "logseq": {
+    "id": "logseq-theme-monokai",
+    "theme": true
+  }
+}

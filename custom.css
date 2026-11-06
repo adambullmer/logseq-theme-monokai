@@ -1,0 +1,120 @@
+/*
+  Monokai Pro inspired theme for Logseq
+  https://monokai.pro/
+*/
+
+:root,
+.dark,
+.dark-theme,
+html[data-theme="dark"] {
+  /* Monokai Pro Palette */
+  --monokai-bg: #2D2A2E;
+  --monokai-bg-light: #403E41;
+  --monokai-bg-lighter: #5B595C;
+
+  --monokai-fg: #FCFCFA;
+  --monokai-fg-muted: #939293;
+  --monokai-fg-faded: #727072;
+
+  --monokai-yellow: #FFD866;
+  --monokai-orange: #FC9867;
+  --monokai-red: #FF6188;
+  --monokai-magenta: #AB9DF2;
+  --monokai-blue: #78DCE8;
+  --monokai-green: #A9DC76;
+
+  /*
+    Logseq v1 / Core Variables
+  */
+  --ls-primary-background-color: var(--monokai-bg);
+  --ls-secondary-background-color: var(--monokai-bg-light);
+  --ls-tertiary-background-color: var(--monokai-bg-lighter);
+  --ls-quaternary-background-color: var(--monokai-bg-lighter);
+
+  --ls-primary-text-color: var(--monokai-fg);
+  --ls-secondary-text-color: var(--monokai-fg-muted);
+
+  --ls-border-color: var(--monokai-bg-light);
+  --ls-secondary-border-color: var(--monokai-bg-lighter);
+  --ls-guideline-color: var(--monokai-bg-light);
+
+  --ls-link-text-color: var(--monokai-blue);
+  --ls-link-text-hover-color: var(--monokai-yellow);
+  --ls-link-ref-text-color: var(--monokai-blue);
+  --ls-link-ref-text-hover-color: var(--monokai-yellow);
+
+  --ls-active-primary-color: var(--monokai-magenta);
+  --ls-active-secondary-color: var(--monokai-blue);
+
+  --ls-page-title-color: var(--monokai-magenta);
+  --ls-page-inline-code-color: var(--monokai-orange);
+  --ls-page-inline-code-bg-color: var(--monokai-bg-light);
+
+  --ls-block-bullet-color: var(--monokai-fg-faded);
+  --ls-block-bullet-active-color: var(--monokai-magenta);
+
+  --ls-search-background-color: var(--monokai-bg-light);
+  --ls-search-icon-color: var(--monokai-blue);
+
+  /*
+    Logseq v2 Tailwind / CSS Var system mappings
+    Mapping grayscale (lx-gray) from dark to light
+  */
+  --lx-gray-01: var(--monokai-bg);
+  --lx-gray-02: var(--monokai-bg-light);
+  --lx-gray-03: var(--monokai-bg-lighter);
+  --lx-gray-04: var(--monokai-bg-lighter);
+  --lx-gray-05: var(--monokai-bg-lighter);
+  --lx-gray-06: var(--monokai-fg-faded);
+  --lx-gray-07: var(--monokai-fg-muted);
+  --lx-gray-08: var(--monokai-fg-muted);
+  --lx-gray-09: var(--monokai-fg);
+  --lx-gray-10: var(--monokai-fg);
+  --lx-gray-11: var(--monokai-fg);
+  --lx-gray-12: var(--monokai-fg);
+
+  /* Accents */
+  --lx-accent-01: var(--monokai-bg);
+  --lx-accent-02: var(--monokai-bg-light);
+  --lx-accent-03: var(--monokai-bg-lighter);
+  --lx-accent-04: var(--monokai-magenta);
+  --lx-accent-05: var(--monokai-magenta);
+  --lx-accent-06: var(--monokai-magenta);
+  --lx-accent-07: var(--monokai-magenta);
+  --lx-accent-08: var(--monokai-magenta);
+  --lx-accent-09: var(--monokai-magenta);
+  --lx-accent-10: var(--monokai-magenta);
+  --lx-accent-11: var(--monokai-magenta);
+  --lx-accent-12: var(--monokai-fg);
+
+  /* Map basic colors used in v2 */
+  --color-red-500: var(--monokai-red);
+  --color-orange-500: var(--monokai-orange);
+  --color-yellow-500: var(--monokai-yellow);
+  --color-green-500: var(--monokai-green);
+  --color-blue-500: var(--monokai-blue);
+  --color-indigo-500: var(--monokai-magenta);
+  --color-purple-500: var(--monokai-magenta);
+  --color-pink-500: var(--monokai-red);
+}
+
+/* Fallback for rx- based variables since v2 uses both --lx and --rx for some colors */
+:root,
+.dark,
+.dark-theme,
+html[data-theme="dark"] {
+  --rx-gray-01: var(--monokai-bg);
+  --rx-gray-02: var(--monokai-bg-light);
+  --rx-gray-03: var(--monokai-bg-lighter);
+  --rx-gray-04: var(--monokai-bg-lighter);
+  --rx-gray-05: var(--monokai-bg-lighter);
+  --rx-gray-06: var(--monokai-fg-faded);
+  --rx-gray-07: var(--monokai-fg-muted);
+  --rx-gray-08: var(--monokai-fg-muted);
+  --rx-gray-09: var(--monokai-fg);
+  --rx-gray-10: var(--monokai-fg);
+  --rx-gray-11: var(--monokai-fg);
+  --rx-gray-12: var(--monokai-fg);
+
+  --accent: var(--monokai-magenta);
+}
