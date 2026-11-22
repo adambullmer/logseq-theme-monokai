@@ -16,12 +16,13 @@ html[data-theme="dark"] {
   --monokai-fg-muted: #939293;
   --monokai-fg-faded: #727072;
 
+  --monokai-red: #D3201F;
+  --monokai-magenta: #F82570;
+  --monokai-orange: #FC961F;
   --monokai-yellow: #FFD866;
-  --monokai-orange: #FC9867;
-  --monokai-red: #FF6188;
-  --monokai-magenta: #AB9DF2;
-  --monokai-blue: #78DCE8;
-  --monokai-green: #A9DC76;
+  --monokai-green: #A6E12D;
+  --monokai-blue: #66D9EE;
+  --monokai-purple: #AE81FF;
 
   /*
     Logseq v1 / Core Variables
@@ -42,6 +43,8 @@ html[data-theme="dark"] {
   --ls-link-text-hover-color: var(--monokai-yellow);
   --ls-link-ref-text-color: var(--monokai-blue);
   --ls-link-ref-text-hover-color: var(--monokai-yellow);
+  --ls-tag-text-color: var(--monokai-green);
+  --ls-tag-text-hover-color: var(--monokai-green);
 
   --ls-active-primary-color: var(--monokai-magenta);
   --ls-active-secondary-color: var(--monokai-blue);
@@ -51,7 +54,7 @@ html[data-theme="dark"] {
   --ls-page-inline-code-bg-color: var(--monokai-bg-light);
 
   --ls-block-bullet-color: var(--monokai-fg-faded);
-  --ls-block-bullet-active-color: var(--monokai-magenta);
+  --ls-block-bullet-active-color: var(--monokai-blue);
 
   --ls-search-background-color: var(--monokai-bg-light);
   --ls-search-icon-color: var(--monokai-blue);
@@ -84,7 +87,7 @@ html[data-theme="dark"] {
   --lx-accent-08: var(--monokai-magenta);
   --lx-accent-09: var(--monokai-magenta);
   --lx-accent-10: var(--monokai-magenta);
-  --lx-accent-11: var(--monokai-magenta);
+  --lx-accent-11: var(--monokai-green);
   --lx-accent-12: var(--monokai-fg);
 
   /* Map basic colors used in v2 */
@@ -93,9 +96,9 @@ html[data-theme="dark"] {
   --color-yellow-500: var(--monokai-yellow);
   --color-green-500: var(--monokai-green);
   --color-blue-500: var(--monokai-blue);
-  --color-indigo-500: var(--monokai-magenta);
-  --color-purple-500: var(--monokai-magenta);
-  --color-pink-500: var(--monokai-red);
+  --color-indigo-500: var(--monokai-purple);
+  --color-purple-500: var(--monokai-purple);
+  --color-pink-500: var(--monokai-magenta);
 }
 
 /* Fallback for rx- based variables since v2 uses both --lx and --rx for some colors */
@@ -118,3 +121,114 @@ html[data-theme="dark"] {
 
   --accent: var(--monokai-magenta);
 }
+
+/* Tags: green text and prefix */
+a.tag,
+.tag,
+.ls-tag,
+.page-tag {
+  --lx-accent-09: var(--monokai-green);
+  --lx-accent-10: var(--monokai-green);
+  --lx-accent-11: var(--monokai-green);
+  --accent: var(--monokai-green);
+  --ls-active-primary-color: var(--monokai-green);
+  color: var(--monokai-green) !important;
+  background-color: transparent;
+}
+
+a.tag *,
+.tag *,
+.ls-tag *,
+.page-tag *,
+a.tag::before,
+a.tag::after,
+.tag::before,
+.tag::after,
+.ls-tag::before,
+.ls-tag::after,
+.page-tag::before,
+.page-tag::after {
+  color: var(--monokai-green) !important;
+}
+
+a.tag:hover,
+.tag:hover,
+.ls-tag:hover,
+.page-tag:hover {
+  color: var(--monokai-green) !important;
+  opacity: 0.85;
+}
+
+a.page-ref,
+.page-ref,
+.page-reference,
+.unclassified-page-ref,
+a.external-link,
+.external-link,
+.block-content a:not(.tag) {
+  color: var(--monokai-blue) !important;
+}
+
+a.page-ref:hover,
+.page-ref:hover,
+.page-reference:hover,
+.unclassified-page-ref:hover,
+a.external-link:hover,
+.external-link:hover,
+.block-content a:not(.tag):hover {
+  color: var(--monokai-yellow) !important;
+}
+
+h1.title,
+.title,
+.ls-block :is(h1, h2, h3, h4, h5, h6),
+.block-content :is(h1, h2, h3, h4, h5, h6),
+.editor-inner :is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
+  color: var(--monokai-magenta) !important;
+}
+
+.ls-icon-Backlog {
+  color: var(--monokai-fg) !important;
+}
+
+.ls-icon-Todo {
+  color: var(--monokai-fg) !important;
+}
+
+.ls-icon-Done {
+  color: var(--monokai-green) !important;
+}
+
+.ls-icon-Done path {
+  stroke: var(--monokai-bg) !important;
+}
+
+.ls-icon-InProgress50 {
+  color: var(--monokai-yellow) !important;
+}
+
+.ls-icon-InReview {
+  color: var(--monokai-blue) !important;
+}
+
+.ls-icon-InReview path {
+  stroke: var(--monokai-bg) !important;
+}
+
+.ls-icon-Cancelled {
+  color: var(--monokai-magenta) !important;
+}
+
+.ls-icon-priorityLvlHigh {
+  color: var(--monokai-yellow) !important;
+}
+
+.ls-icon-priorityLvlUrgent {
+  color: var(--monokai-orange) !important;
+}
+
+:not(pre) > code {
+  background: var(--monokai-bg-light);
+  color: var(--monokai-orange);
+}
+
