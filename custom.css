@@ -54,7 +54,7 @@ html[data-theme="dark"] {
   --ls-page-inline-code-bg-color: var(--monokai-bg-light);
 
   --ls-block-bullet-color: var(--monokai-fg-faded);
-  --ls-block-bullet-active-color: var(--monokai-blue);
+  --ls-block-bullet-active-color: var(--monokai-fg-muted);
 
   --ls-search-background-color: var(--monokai-bg-light);
   --ls-search-icon-color: var(--monokai-blue);
@@ -232,3 +232,17 @@ h1.title,
   color: var(--monokai-orange);
 }
 
+.block-children {
+  border-color: var(--monokai-fg-faded) !important;
+}
+
+.positioned-properties.block-below .bottom-property-pill {
+  color: var(--monokai-purple);
+}
+.positioned-properties.block-below .bottom-property-pill::after {
+  --ls-border-color: var(--monokai-purple);
+}
+
+.positioned-properties.block-below .bottom-property-pill .property-key-inner a, .positioned-properties.block-below .bottom-property-pill a.property-k {
+  color: var(--monokai-purple);
+}
