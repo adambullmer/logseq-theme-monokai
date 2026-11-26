@@ -59,6 +59,10 @@ html[data-theme="dark"] {
   --ls-search-background-color: var(--monokai-bg-light);
   --ls-search-icon-color: var(--monokai-blue);
 
+  --ls-color-file-sync-error: var(--monokai-magenta);
+  --ls-color-file-sync-pending: var(--monokai-yellow);
+  --ls-color-file-sync-idle: var(--monokai-green);
+
   /*
     Logseq v2 Tailwind / CSS Var system mappings
     Mapping grayscale (lx-gray) from dark to light
@@ -245,4 +249,17 @@ h1.title,
 
 .positioned-properties.block-below .bottom-property-pill .property-key-inner a, .positioned-properties.block-below .bottom-property-pill a.property-k {
   color: var(--monokai-purple);
+}
+
+.ui__toaster-viewport .ui__toast .ui__toast-status-icon.success {
+  color: var(--monokai-green);
+}
+
+.ui__toaster-viewport .ui__toast .ui__toast-status-icon.error {
+  color: var(--monokai-magenta);
+}
+
+.ui__avatar-fallback {
+  color: var(--monokai-bg) !important;
+  background-color: var(--monokai-green) !important;
 }
